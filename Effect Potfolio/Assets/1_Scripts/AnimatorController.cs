@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class AnimatorController : MonoBehaviour
 {
     Animator animator;
+    [SerializeField]
+    private VisualEffect visualEffectPrefab;
 
     void Start()
     {
@@ -14,13 +17,20 @@ public class AnimatorController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyUp("e"))
         {
             animator.SetBool("isReady", true);
+            Vector3 spawnPosition = transform.position + new Vector3(0, 0.1f, 0);
+            VisualEffect visualEffectInstance = Instantiate(visualEffectPrefab, spawnPosition, Quaternion.identity);
+            visualEffectInstance.Play();
+            Destroy(visualEffectInstance.gameObject, 6.5f);
+            Invoke("Shoot", 5f);
         }
-        else if (Input.GetKeyUp("e"))
-        {
-            animator.SetBool("isReady", false);
-        }
+    }
+
+    public void Shoot()
+    {
+        animator.SetBool("isReady", false);
+        
     }
 }
