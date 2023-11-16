@@ -10,6 +10,8 @@ public class AnimatorController : MonoBehaviour
     private VisualEffect aura;
     [SerializeField]
     private VisualEffect charging;
+    [SerializeField]
+    private VisualEffect auraDeath;
 
     void Start()
     {
@@ -23,10 +25,10 @@ public class AnimatorController : MonoBehaviour
         {
             animator.SetBool("isReady", true);
             Vector3 spawnPosition = transform.position + new Vector3(0, 0.1f, 0);
-            VisualEffect visualEffectInstance = Instantiate(aura, spawnPosition, Quaternion.identity);
-            visualEffectInstance.Play();
-            Destroy(visualEffectInstance.gameObject, 15f);
-            Invoke("Shoot", 80f);
+            VisualEffect auras = Instantiate(aura, spawnPosition, Quaternion.identity);
+            auras.Play();
+            Destroy(auras.gameObject, 15f);
+            Invoke("Shoot", 8f);
             StartCoroutine(Charging());
         }
     }
@@ -39,10 +41,13 @@ public class AnimatorController : MonoBehaviour
 
     IEnumerator Charging()
     {
-        yield return null;
         Vector3 spawnPosition = transform.position + new Vector3(0, 1.4f, 1.5f);
-        VisualEffect visualEffectInstance = Instantiate(charging, spawnPosition, Quaternion.identity);
-        visualEffectInstance.Play();
-        Destroy(visualEffectInstance.gameObject, 15f);
+        VisualEffect chargings = Instantiate(charging, spawnPosition, Quaternion.identity);
+        chargings.Play();
+        Destroy(chargings.gameObject, 8f);
+
+        yield return new WaitForSeconds(8f);
+        VisualEffect auraDeaths = Instantiate(auraDeath, spawnPosition, Quaternion.identity);
+        auraDeaths.Play();
     }
 }
