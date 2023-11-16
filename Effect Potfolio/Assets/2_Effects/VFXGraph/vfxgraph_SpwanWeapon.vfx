@@ -155,32 +155,14 @@ MonoBehaviour:
     - model: {fileID: 8926484042661614954}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 8926484042661614920}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614926}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614947}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614950}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 8926484042661614952}
-      id: 0
-      isStickyNote: 0
-    - model: {fileID: 0}
-      id: 0
-      isStickyNote: 0
   stickyNoteInfos: []
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: -0
+    x: 755
     y: -697
-    width: 5309
-    height: 2776
+    width: 4552
+    height: 2764
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,7 +173,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4c867f6b72b714dbb5fd1780afe208, type: 3}
-  m_Name: vfxgraph_Spwan
+  m_Name: vfxgraph_SpwanWeapon
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 0}
@@ -385,7 +367,7 @@ VisualEffectResource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: vfxgraph_Spwan
+  m_Name: vfxgraph_SpwanWeapon
   m_Graph: {fileID: 114350483966674976}
   m_Infos:
     m_RendererSettings:
@@ -9219,7 +9201,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.6348675489425659,"g":1.113789677619934,"b":2.1944339275360109,"a":1.0}'
+      m_SerializableObject: '{"r":1.5828344821929932,"g":15.660845756530762,"b":47.9372444152832,"a":1.0}'
     m_Space: 2147483647
   m_Property:
     name: _Color
