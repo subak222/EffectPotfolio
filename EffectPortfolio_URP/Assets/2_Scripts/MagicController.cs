@@ -7,8 +7,8 @@ public class MagicController : MonoBehaviour
 {
     [SerializeField]
     private Animator animatorSword;
-    [SerializeField]
-    private VisualEffect ground;
+    
+    public List<Slash> slashes;
 
     void Start()
     {
@@ -19,21 +19,38 @@ public class MagicController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(Cube());
+        if (Input.GetKeyUp("e"))
+        {
+            StartCoroutine(Cube());
+            animatorSword.SetBool("Sword", true);
+        }
+        
     }
 
     IEnumerator Cube()
     {
-        if (Input.GetKeyUp("e"))
+        for (int i = 0; i < slashes.Count; i++)
         {
-            animatorSword.SetBool("Sword", true);
-            yield return new WaitForSeconds(0.1f);
-            animatorSword.SetBool("Sword", false);
-            yield return new WaitForSeconds(3.4f);
-            Vector3 spawnPosition = transform.position + new Vector3(-5f, 0.1f, 0);
-            VisualEffect grounds = Instantiate(ground, spawnPosition, Quaternion.identity);
-            grounds.Play();
+            yield return new WaitForSeconds(slashes[i].delay);
+            slashes[i].slashobj.SetActive(true);
         }
-        
+        animatorSword.SetBool("Sword", false);
+        yield return new WaitForSeconds(3f);
+        DestroySlash();
+    }
+
+    void DestroySlash()
+    {
+        for (int i = 0; i < slashes.Count; i++)
+        {
+            slashes[i].slashobj.SetActive(false);
+        }
+    }
+
+    [System.Serializable]
+    public class Slash
+    {
+        public GameObject slashobj;
+        public float delay;
     }
 }
