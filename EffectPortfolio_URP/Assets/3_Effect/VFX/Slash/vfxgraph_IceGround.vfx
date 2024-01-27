@@ -16,10 +16,10 @@ MonoBehaviour:
   - title: 1st Ground Particle
     position:
       serializedVersion: 2
-      x: -1946
-      y: -233
-      width: 984
-      height: 1779
+      x: -1869
+      y: -238
+      width: 986
+      height: 1767
     contents:
     - model: {fileID: 8926484042661614555}
       id: 0
@@ -458,10 +458,10 @@ MonoBehaviour:
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: -1946
+    x: -1902
     y: -240
-    width: 3350
-    height: 6109
+    width: 3308
+    height: 6082
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4c867f6b72b714dbb5fd1780afe208, type: 3}
-  m_Name: vfxgraph_IceSword
+  m_Name: vfxgraph_IceGround
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 0}
@@ -725,7 +725,7 @@ VisualEffectResource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: vfxgraph_IceSword
+  m_Name: vfxgraph_IceGround
   m_Graph: {fileID: 114350483966674976}
   m_Infos:
     m_RendererSettings:
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children:
   - {fileID: 8926484042661614606}
-  m_UIPosition: {x: -1411, y: -174}
+  m_UIPosition: {x: -1333, y: -179}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -793,7 +793,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614580}
   - {fileID: 8926484042661614621}
   - {fileID: 8926484042661614635}
-  m_UIPosition: {x: -1411, y: 131}
+  m_UIPosition: {x: -1333, y: 125}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: -1411, y: 778}
+  m_UIPosition: {x: -1333, y: 773}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -1227,7 +1227,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614645}
   - {fileID: 8926484042661614654}
   - {fileID: 8926484042661614666}
-  m_UIPosition: {x: -1411, y: 933}
+  m_UIPosition: {x: -1333, y: 927}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -2051,7 +2051,7 @@ MonoBehaviour:
       inputSlot: {fileID: 8926484042661614630}
     - outputSlot: {fileID: 8926484042661614633}
       inputSlot: {fileID: 8926484042661614629}
-    position: {x: -1581, y: 546}
+    position: {x: -1503.3334, y: 540.6667}
     expandedSlots: []
     expanded: 0
   - m_Id: 1
@@ -2433,7 +2433,7 @@ MonoBehaviour:
       inputSlot: {fileID: 8926484042661614651}
     - outputSlot: {fileID: 8926484042661614642}
       inputSlot: {fileID: 8926484042661614648}
-    position: {x: -1921, y: 1175}
+    position: {x: -1843.3334, y: 1169.3333}
     expandedSlots: []
     expanded: 0
   - m_Id: 1
@@ -2642,7 +2642,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: -1637, y: 1270}
+  m_UIPosition: {x: -1559, y: 1265}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3004,7 +3004,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614661}
       inputSlot: {fileID: 8926484042661614655}
-    position: {x: -1593, y: 1422}
+    position: {x: -1515.3334, y: 1416.6666}
     expandedSlots: []
     expanded: 0
   - m_Id: 1
